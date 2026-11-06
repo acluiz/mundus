@@ -1,7 +1,7 @@
 import type { Continent } from "../types.ts";
 
 interface ContinentFilterProps {
-  continents: Continent[];
+  continents: readonly Continent[];
   value: Continent | "";
   onChange: (value: Continent | "") => void;
 }

@@ -1,9 +1,13 @@
-export type Continent =
-  | "Africa"
-  | "Americas"
-  | "Asia"
-  | "Europe"
-  | "Oceania";
+export const continents = [
+  "Africa",
+  "Americas",
+  "Antarctic",
+  "Asia",
+  "Europe",
+  "Oceania",
+] as const;
+
+export type Continent = (typeof continents)[number];
 
 export interface Country {
   code: string;
